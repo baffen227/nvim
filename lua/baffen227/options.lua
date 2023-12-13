@@ -18,3 +18,14 @@ vim.opt.tabstop=4                     -- Show tab as four spaces
 vim.opt.shiftwidth=4                  -- Indent using two columns
 vim.opt.expandtab=true                -- Use spaces instead of tabs
 
+-- Utility
+vim.opt.undofile=true                 -- Enable undo files
+vim.opt.splitbelow=true               -- Create new horizontal windows below
+vim.opt.splitright=true               -- Create new vertical windows to the right
+vim.opt.hlsearch=true                 -- Hightlight search
+vim.opt.incsearch=true                -- Incremental search
+vim.opt.exrc=true                     -- Add support for local .nvim.lua configuration
+vim.opt.mouse=""                      -- Disable mouse
+-- Set path to the current working directory
+vim.opt.path=""..vim.fn.getcwd()..","..vim.fn.getcwd().."/**"
+
