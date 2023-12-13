@@ -11,3 +11,10 @@ vim.opt.complete="."                  -- Only use current buffer for autocomplet
 vim.opt.completeopt="menuone,noselect,noinsert,preview"
 vim.opt.pumheight=10                  -- Menu height (number of lines)
 
+-- Indentatioin
+vim.opt.autoindent=true               -- Auto indent
+vim.opt.smartindent=true              -- Smart indent
+vim.opt.tabstop=4                     -- Show tab as four spaces
+vim.opt.shiftwidth=4                  -- Indent using two columns
+vim.opt.expandtab=true                -- Use spaces instead of tabs
+
