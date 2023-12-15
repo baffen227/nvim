@@ -34,3 +34,15 @@ vim.keymap.set('n', '<C-p>', vim.cmd.tabprevious)
 -- Switch to next tab
 vim.keymap.set('n', '<C-n>', vim.cmd.tabnext)
 
+-- BUFFERS
+-- Previous buffer
+vim.keymap.set('n', '<M-Left>', vim.cmd.bprevious)
+-- Next buffer
+vim.keymap.set('n', '<M-Right>', vim.cmd.bnext)
+-- List buffers
+vim.keymap.set('n', '<M-Down>', vim.cmd.buffers)
+-- Go to buffer
+vim.keymap.set('n', '<M-Up>', ':buffer')
+-- Delete buffer
+vim.keymap.set('n', '<M-Del>', vim.cmd.bdelete)
+
