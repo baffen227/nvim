@@ -46,3 +46,23 @@ vim.keymap.set('n', '<M-Up>', ':buffer')
 -- Delete buffer
 vim.keymap.set('n', '<M-Del>', vim.cmd.bdelete)
 
+-- UTILITY
+-- Omni complete
+vim.keymap.set('i', '<Tab>', '<C-x><C-o>')
+-- Save file on exit insert mode
+vim.keymap.set('i', '<C-c>', '<Esc>:wa<CR>')
+-- Save file on exit normal mode
+vim.keymap.set('n', '<C-c>', '<Esc>:wa<CR>')
+-- Show keymaps
+vim.keymap.set('n', '<leader>?', vim.cmd.map)
+-- Replace word under the cursor
+vim.keymap.set('n', '<leader>r', ':%s/<C-r><C-w>//g<Left><Left>')
+-- Find file
+vim.keymap.set('n', '<leader>f', ':find ')
+-- Netrw File Explorer
+vim.keymap.set('n', '<leader>e', ':Lex 30<CR>')
+-- Toggle list
+vim.keymap.set('n', '<F3>', ':set list!<CR>')
+-- Toggle highlight search
+vim.keymap.set('n', '<F4>', ':set hls!<CR>')
+
