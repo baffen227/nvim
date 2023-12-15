@@ -24,3 +24,13 @@ vim.keymap.set('n', '<C-Right>', [[<cmd>vertical resize -5<cr>]])
 -- Close window
 vim.keymap.set('n', '<C-q>', vim.cmd.quit)
 
+-- TABS
+-- Open new tab
+vim.keymap.set('n', '<C-t>', vim.cmd.tabnew)
+-- Close tab
+vim.keymap.set('n', '<C-w>', vim.cmd.tabclose)
+-- Switch to previous tab
+vim.keymap.set('n', '<C-p>', vim.cmd.tabprevious)
+-- Switch to next tab
+vim.keymap.set('n', '<C-n>', vim.cmd.tabnext)
+
