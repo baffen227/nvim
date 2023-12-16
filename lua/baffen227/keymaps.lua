@@ -95,3 +95,11 @@ vim.keymap.set('n', '*', '*zzzv')
 vim.keymap.set('n', '<C-PageUp>', vim.cmd.lprev)
 vim.keymap.set('n', '<C-PageDown>', vim.cmd.lnext)
 
+-- DISABLE arrow keys
+vim.keymap.set('n', '<Up>', '<Nop>')
+vim.keymap.set('n', '<Down>', '<Nop>')
+vim.keymap.set('n', '<Left>', '<Nop>')
+vim.keymap.set('n', '<Right>', '<Nop>')
+vim.keymap.set('n', '<PageUp>', '<Nop>')
+vim.keymap.set('n', '<PageDown>', '<Nop>')
+
