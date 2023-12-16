@@ -17,3 +17,13 @@ vim.api.nvim_create_autocmd('InsertCharPre', {
     end,
 })
 
+-- GIT GREP
+vim.keymap.set('n', '<leader>g', function()
+    local cword = vim.fn.expand('<cword>')
+    local git_grep = 'git grep -I -n '..cword
+    local cmd = 'system("'..git_grep..'")'
+    vim.cmd.lgetexpr(cmd)
+    vim.cmd.lopen()
+    vim.cmd('/'..cword)
+end)
+
