@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd('FileType', {
 
 -- MAKE
 vim.keymap.set('n', '<leader>m', function()
-  vim.cmd.lgetexpr('system(&makeprg)')
-  vim.cmd.lopen()
+    vim.cmd.lgetexpr('system(&makeprg)')
+    vim.cmd.lopen()
 end)
 
