@@ -42,7 +42,7 @@ vim.keymap.set('n', '<M-Right>', vim.cmd.bnext)
 -- List buffers
 vim.keymap.set('n', '<M-Down>', vim.cmd.buffers)
 -- Go to buffer
-vim.keymap.set('n', '<M-Up>', ':buffer')
+vim.keymap.set('n', '<M-Up>', ':buffer ')
 -- Delete buffer
 vim.keymap.set('n', '<M-Del>', vim.cmd.bdelete)
 
