@@ -90,3 +90,8 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Search word under cursor keeping cursor in the middle
 vim.keymap.set('n', '*', '*zzzv')
 
+-- LOCATION LIST
+-- Navigate through location list
+vim.keymap.set('n', '<C-PageUp>', vim.cmd.lprev)
+vim.keymap.set('n', '<C-PageDown>', vim.cmd.lnext)
+
