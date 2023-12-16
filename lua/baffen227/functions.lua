@@ -27,3 +27,45 @@ vim.keymap.set('n', '<leader>g', function()
     vim.cmd('/'..cword)
 end)
 
+-- GIT LS-FILES
+vim.api.nvim_create_user_command('OpenFile',
+    function(opts)
+        local names = "*"
+        for arg in opts.args:gmatch("%S+") do
+            names = names..arg.."*"
+        end
+        local git_ls_files = 'git ls-files '..names
+        local cmd = 'system("'..git_ls_files..'")'
+        vim.cmd.lgetexpr(cmd)
+        vim.cmd.lopen()
+        local txt = opts.args:gsub('.*% ', '')
+        vim.cmd('/'..txt)
+    end,
+    { nargs = '+' }
+)
+
+vim.keymap.set('n', '<leader>o', ':OpenFile ')
+
+-- LOCATION LIST
+local open_location = function()
+    local list = vim.fn.getloclist(vim.fn.win_getid())
+    local linenumber = vim.fn.line(".") - 1
+    local entry = vim.fn.get(list, linenumber)
+    local file = entry.text
+    local fileline = 1
+    if entry.bufnr ~= 0 then
+        file = vim.fn.bufname(entry.bufnr)
+        fileline = entry.lnum
+    end
+    vim.cmd('wincmd p')
+    vim.cmd.edit(file)
+    vim.fn.cursor(fileline, 1)
+end
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'qf' },
+    callback = function (opts)
+        vim.keymap.set('n', '<Enter>', open_location)
+    end,
+})
+
