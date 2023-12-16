@@ -66,3 +66,13 @@ vim.keymap.set('n', '<F3>', ':set list!<CR>')
 -- Toggle highlight search
 vim.keymap.set('n', '<F4>', ':set hls!<CR>')
 
+-- VISUAL MODE
+-- Replace
+vim.keymap.set('v', '<leader>r', ':s/')
+-- Yank selection to clipboard
+vim.keymap.set('v', '<leader>y', '"+y')
+-- Delete selection to void register
+vim.keymap.set('v', '<leader>d', '"_d')
+-- Delete selection into the void register and then paste over it
+vim.keymap.set('v', '<leader>p', '"_dP')
+
