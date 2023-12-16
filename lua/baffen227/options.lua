@@ -1,4 +1,3 @@
-
 -- Appearance
 vim.opt.shortmess="I"                 -- Remove splash screen
 vim.opt.cursorline=true               -- Show cursor line
