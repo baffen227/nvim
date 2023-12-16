@@ -66,3 +66,40 @@ vim.keymap.set('n', '<F3>', ':set list!<CR>')
 -- Toggle highlight search
 vim.keymap.set('n', '<F4>', ':set hls!<CR>')
 
+-- VISUAL MODE
+-- Replace
+vim.keymap.set('v', '<leader>r', ':s/')
+-- Yank selection to clipboard
+vim.keymap.set('v', '<leader>y', '"+y')
+-- Delete selection to void register
+vim.keymap.set('v', '<leader>d', '"_d')
+-- Delete selection into the void register and then paste over it
+vim.keymap.set('v', '<leader>p', '"_dP')
+
+-- MOVEMENT
+-- Join next line keeping cursor position
+vim.keymap.set('n', 'J', 'mzJ`z')
+-- Scroll half page up keeping cursor in the middle
+vim.keymap.set('n', '<C-u>', '<C-u>M')
+-- Scroll half page down keeping cursor in the middle
+vim.keymap.set('n', '<C-d>', '<C-d>M')
+-- Search forwards keeping cursor in the middle
+vim.keymap.set('n', 'n', 'nzzzv')
+-- Search backwards keeping cursor in the middle
+vim.keymap.set('n', 'N', 'Nzzzv')
+-- Search word under cursor keeping cursor in the middle
+vim.keymap.set('n', '*', '*zzzv')
+
+-- LOCATION LIST
+-- Navigate through location list
+vim.keymap.set('n', '<C-PageUp>', vim.cmd.lprev)
+vim.keymap.set('n', '<C-PageDown>', vim.cmd.lnext)
+
+-- DISABLE arrow keys
+vim.keymap.set('n', '<Up>', '<Nop>')
+vim.keymap.set('n', '<Down>', '<Nop>')
+vim.keymap.set('n', '<Left>', '<Nop>')
+vim.keymap.set('n', '<Right>', '<Nop>')
+vim.keymap.set('n', '<PageUp>', '<Nop>')
+vim.keymap.set('n', '<PageDown>', '<Nop>')
+
