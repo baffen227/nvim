@@ -75,3 +75,10 @@ vim.keymap.set('n', '<leader>m', function()
     vim.cmd.lopen()
 end)
 
+-- CLEAR JUMPS
+vim.api.nvim_create_autocmd('VimEnter', {
+    callback = function (opts)
+        vim.cmd.clearjumps()
+    end,
+})
+
