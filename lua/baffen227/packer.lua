@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
 
   -- Here you can add the plugins you want
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
   -- Color Scheme
   use 'folke/tokyonight.nvim'
 
