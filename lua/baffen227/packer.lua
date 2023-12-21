@@ -27,6 +27,13 @@ return require('packer').startup(function(use)
   -- Color Scheme
   use 'folke/tokyonight.nvim'
 
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
