@@ -21,11 +21,11 @@ return require('packer').startup(function(use)
 
   -- Here you can add the plugins you want
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-
   -- Color Scheme
   use 'folke/tokyonight.nvim'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
 
   -- Telescope
   use {
@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- Git signs
+  use 'lewis6991/gitsigns.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
