@@ -65,6 +65,9 @@ vim.keymap.set('n', '<leader>e', ':Lex 30<CR>')
 vim.keymap.set('n', '<F3>', ':set list!<CR>')
 -- Toggle highlight search
 vim.keymap.set('n', '<F4>', ':set hls!<CR>')
+-- Exit from insert mode by Esc in Terminal
+-- https://github.com/LunarVim/LunarVim/issues/4007
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 
 -- VISUAL MODE
 -- Replace
