@@ -11,5 +11,3 @@ If you're a Rust programmer, ripgrep can be installed with cargo.
 ```
 $ cargo install ripgrep
 ```
-
-test2
